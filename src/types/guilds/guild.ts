@@ -14,6 +14,7 @@ import { DiscordVerificationLevels } from "./verification_levels.ts";
 import { WelcomeScreen } from "./welcome_screen.ts";
 import type { StageInstance } from "../channels/stage_instance.ts";
 import { GuildNsfwLevel } from "./guild_nsfw_level.ts";
+import type { Sticker } from "../stickers/sticker.ts";
 
 /** https://discord.com/developers/docs/resources/guild#guild-object */
 export interface Guild {
@@ -114,4 +115,6 @@ export interface Guild {
   nsfwLevel: GuildNsfwLevel;
   /** Stage instances in the guild */
   stageInstances?: StageInstance[];
+  /** Custom guild stickers */
+  stickers?: Sticker[];
 }

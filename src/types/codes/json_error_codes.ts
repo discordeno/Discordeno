@@ -30,6 +30,7 @@ export enum DiscordJsonErrorCodes {
   UnknownGiftCode = 10038,
   UnknownGuildTemplate = 10057,
   UnknownDiscoveryCategory = 10059,
+  UnknownSticker,
   UnknownInteraction = 10062,
   UnknownApplicationCommand = 10063,
   UnknownApplicationCommandPermissions = 10066,

@@ -105,6 +105,8 @@ export const endpoints = {
   GUILD_PREVIEW: (guildId: bigint) => `${GUILDS_BASE(guildId)}/preview`,
   UPDATE_VOICE_STATE: (guildId: bigint, userId?: bigint) => `${GUILDS_BASE(guildId)}/voice-states/${userId ?? "@me"}`,
   GUILD_WELCOME_SCREEN: (guildId: bigint) => `${GUILDS_BASE(guildId)}/welcome-screen`,
+  GUILD_STICKERS: (guildId: bigint) => `${GUILDS_BASE(guildId)}/stickers`,
+  GUILD_STICKER: (guildId: bigint, stickerId: bigint) => `${GUILDS_BASE(guildId)}/stickers/${stickerId}`,
 
   // Voice
   VOICE_REGIONS: `${baseEndpoints.BASE_URL}/voice/regions`,
@@ -165,6 +167,10 @@ export const endpoints = {
   // Stage instances
   STAGE_INSTANCES: `${baseEndpoints.BASE_URL}/stage-instances`,
   STAGE_INSTANCE: (channelId: bigint) => `${baseEndpoints.BASE_URL}/stage-instances/${channelId}`,
+
+  // Stickers
+  STICKER: (stickerId: bigint) => `${baseEndpoints.BASE_URL}/stickers/${stickerId}`,
+  STICKER_PACKS: `${baseEndpoints.BASE_URL}/sticker-packs`,
 };
 
 export const SLASH_COMMANDS_NAME_REGEX = /^[\w-]{1,32}$/;

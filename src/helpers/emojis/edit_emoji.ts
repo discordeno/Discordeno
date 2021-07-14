@@ -6,7 +6,7 @@ import { requireBotGuildPermissions } from "../../util/permissions.ts";
 
 /** Modify the given emoji. Requires the MANAGE_EMOJIS permission. */
 export async function editEmoji(guildId: bigint, id: bigint, options: ModifyGuildEmoji) {
-  await requireBotGuildPermissions(guildId, ["MANAGE_EMOJIS"]);
+  await requireBotGuildPermissions(guildId, ["MANAGE_EMOJIS_AND_STICKERS"]);
 
   return await rest.runMethod<Emoji>("patch", endpoints.GUILD_EMOJI(guildId, id), options);
 }

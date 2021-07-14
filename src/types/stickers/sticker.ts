@@ -1,8 +1,8 @@
-import { DiscordMessageStickerFormatTypes } from "./message_sticker_format_types.ts";
+import { DiscordStickerFormatTypes } from "./sticker_format_types.ts";
 import type { User } from "../users/user.ts";
 
-/** https://discord.com/developers/docs/resources/channel#message-object-message-sticker-structure */
-export interface MessageSticker {
+// TODO(rigormorrtiss): add link to the resource in the Discord API documentation
+export interface Sticker {
   /** Id of the sticker */
   id: string;
   /** Id of the pack the sticker is from */
@@ -20,7 +20,7 @@ export interface MessageSticker {
    */
   asset: string;
   /** Type of sticker format */
-  formatType: DiscordMessageStickerFormatTypes;
+  formatType: DiscordStickerFormatTypes;
   /**  Whether or not the sticker is available */
   available?: boolean;
   /** Id of the guild that owns this sticker */

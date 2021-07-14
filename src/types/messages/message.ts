@@ -1,3 +1,4 @@
+import type { Sticker } from "./../stickers/sticker.ts";
 import { Channel } from "../channels/channel.ts";
 import { ChannelMention } from "../channels/channel_mention.ts";
 import { ThreadMember } from "../channels/threads/thread_member.ts";
@@ -10,7 +11,6 @@ import { Attachment } from "./attachment.ts";
 import { MessageComponents } from "./components/message_components.ts";
 import { MessageActivity } from "./message_activity.ts";
 import { MessageReference } from "./message_reference.ts";
-import { MessageSticker } from "./message_sticker.ts";
 import { DiscordMessageTypes } from "./message_types.ts";
 import { Reaction } from "./reaction.ts";
 import { MessageStickerItem } from "./message_sticker_item.ts";
@@ -83,7 +83,7 @@ export interface Message {
    * The stickers sent with the message (bots currently can only receive messages with stickers, not send)
    * @deprecated
    */
-  stickers?: MessageSticker[];
+  stickers?: Sticker[];
   /**
    * The message associated with the `message_reference`
    * Note: This field is only returned for messages with a `type` of `19` (REPLY). If the message is a reply but the `referenced_message` field is not present, the backend did not attempt to fetch the message that was being replied to, so its state is unknown. If the field exists but is null, the referenced message was deleted.
