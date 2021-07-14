@@ -10,6 +10,8 @@ export interface GuildMemberUpdate {
   user: User;
   /** Nickname of the user in the guild */
   nick?: string | null;
+  /** The member's guild avatar hash */
+  avatar: string | null;
   /** When the user joined the guild */
   joinedAt: string | null;
   /** When the user starting boosting the guild */

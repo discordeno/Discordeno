@@ -6,6 +6,8 @@ export interface GuildMember {
   user?: User;
   /** This users guild nickname */
   nick?: string | null;
+  /** The member's guild avatar hash */
+  avatar: string | null;
   /** Array of role object ids */
   roles: string[];
   /** When the user joined the guild */
