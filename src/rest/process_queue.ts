@@ -117,6 +117,8 @@ export async function processQueue(id: string) {
 
       // SOMETIMES DISCORD RETURNS AN EMPTY 204 RESPONSE THAT CAN'T BE MADE TO JSON
       if (response.status === 204) {
+        // HAVE TO DO THIS SO IT GETS COLLECTED BY THE GC ELSE IT WILL JUST STAY IN MEMORY
+        await response.text();
         rest.eventHandlers.fetchSuccess(queuedRequest.payload);
         // REMOVE FROM QUEUE
         queue.shift();
